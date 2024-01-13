@@ -40,6 +40,7 @@
   <div class="home page active">
     <button onclick="showPage('page1')">Page 1</button>
     <button onclick="showPage('page2')">Page 2</button>
+    <a href="admin.html">Admin Page</a>
   </div>
 
   <div id="page1" class="page">
@@ -55,39 +56,7 @@
   </div>
 </div>
 
-<script>
-  function showPage(pageId) {
-    document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
-    document.getElementById(pageId).classList.add('active');
-  }
-
-  function goBack() {
-    document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
-    document.querySelector('.home.page').classList.add('active');
-  }
-</script>
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyA4mHQZgdQW_hDWVOKc8Ry_jAFPKQIZNsk",
-    authDomain: "rajvpsmath.firebaseapp.com",
-    projectId: "rajvpsmath",
-    storageBucket: "rajvpsmath.appspot.com",
-    messagingSenderId: "987632352897",
-    appId: "1:987632352897:web:5c5929058e0b46231c9780",
-    measurementId: "G-GLNPKBT08S"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
+<script src="app.js" defer></script>
+<script type="module" src="firebase.js"></script>
 </body>
-	    </html>
+</html>
